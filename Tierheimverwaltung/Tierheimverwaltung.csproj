@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{C5CF06D0-4D26-4E00-A0FF-2EF0163A5BA4}</ProjectGuid>
+        <OutputType>WinExe</OutputType>
+        <RootNamespace>Tierheimverwaltung</RootNamespace>
+        <AssemblyName>Tierheimverwaltung</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <Deterministic>true</Deterministic>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+          <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net48\MaterialSkin.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+          <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=8.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+          <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.2\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=8.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+          <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.8.0.2\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+        </Reference>
+        <Reference Include="mscorlib" />
+        <Reference Include="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
+          <HintPath>..\packages\MySqlConnector.2.4.0-beta.2\lib\net48\MySqlConnector.dll</HintPath>
+        </Reference>
+        <Reference Include="System" />
+        <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+          <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Core" />
+        <Reference Include="System.Design" />
+        <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+          <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+          <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Numerics" />
+        <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+          <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Transactions" />
+        <Reference Include="System.Xml.Linq" />
+        <Reference Include="System.Data.DataSetExtensions" />
+        <Reference Include="Microsoft.CSharp" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Deployment" />
+        <Reference Include="System.Drawing" />
+        <Reference Include="System.Net.Http" />
+        <Reference Include="System.Windows.Forms" />
+        <Reference Include="System.Xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="AufnahmeAbgabe\AufAb.cs" />
+        <Compile Include="AufnahmeAbgabe\DBAufAb.cs" />
+        <Compile Include="AufnahmeAbgabe\UCAufAb.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="AufnahmeAbgabe\UCAufAb.Designer.cs">
+          <DependentUpon>UCAufAb.cs</DependentUpon>
+        </Compile>
+        <Compile Include="AufnahmeAbgabe\UCAufAbCreate.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="AufnahmeAbgabe\UCAufAbCreate.Designer.cs">
+          <DependentUpon>UCAufAbCreate.cs</DependentUpon>
+        </Compile>
+        <Compile Include="AufnahmeAbgabe\UCAufAbCreateEingabeID.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="AufnahmeAbgabe\UCAufAbCreateEingabeID.Designer.cs">
+          <DependentUpon>UCAufAbCreateEingabeID.cs</DependentUpon>
+        </Compile>
+        <Compile Include="AufnahmeAbgabe\UCAufAbDelete.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="AufnahmeAbgabe\UCAufAbDelete.Designer.cs">
+          <DependentUpon>UCAufAbDelete.cs</DependentUpon>
+        </Compile>
+        <Compile Include="AufnahmeAbgabe\UCAufAbUpdate.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="AufnahmeAbgabe\UCAufAbUpdate.Designer.cs">
+          <DependentUpon>UCAufAbUpdate.cs</DependentUpon>
+        </Compile>
+        <Compile Include="AufnahmeAbgabe\UCAufAbUpdateEingabeID.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="AufnahmeAbgabe\UCAufAbUpdateEingabeID.Designer.cs">
+          <DependentUpon>UCAufAbUpdateEingabeID.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Form1.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Form1.Designer.cs">
+          <DependentUpon>Form1.cs</DependentUpon>
+        </Compile>
+        <Compile Include="GlobalVariables.cs" />
+        <Compile Include="Kennzeichnung\DBKennzeichnung.cs" />
+        <Compile Include="Kennzeichnung\Kennzeichnung.cs" />
+        <Compile Include="Kennzeichnung\UCKennzCreate.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Kennzeichnung\UCKennzCreate.Designer.cs">
+          <DependentUpon>UCKennzCreate.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Kennzeichnung\UCKennzCreateEingabe.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Kennzeichnung\UCKennzCreateEingabe.Designer.cs">
+          <DependentUpon>UCKennzCreateEingabe.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Kennzeichnung\UCKennzDelete.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Kennzeichnung\UCKennzDelete.Designer.cs">
+          <DependentUpon>UCKennzDelete.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Kennzeichnung\UCKennzeichnung.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Kennzeichnung\UCKennzeichnung.Designer.cs">
+          <DependentUpon>UCKennzeichnung.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Kennzeichnung\UCKennzUpdate.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Kennzeichnung\UCKennzUpdate.Designer.cs">
+          <DependentUpon>UCKennzUpdate.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Kennzeichnung\UCKennzUpdateEingabeID.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Kennzeichnung\UCKennzUpdateEingabeID.Designer.cs">
+          <DependentUpon>UCKennzUpdateEingabeID.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Login.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Login.Designer.cs">
+          <DependentUpon>Login.cs</DependentUpon>
+        </Compile>
+        <Compile Include="MedAkte\DBMedAkte.cs" />
+        <Compile Include="MedAkte\MedAkte.cs" />
+        <Compile Include="MedAkte\UCMedAkte.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="MedAkte\UCMedAkte.Designer.cs">
+          <DependentUpon>UCMedAkte.cs</DependentUpon>
+        </Compile>
+        <Compile Include="MedAkte\UCMedAkteCreate.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="MedAkte\UCMedAkteCreate.Designer.cs">
+          <DependentUpon>UCMedAkteCreate.cs</DependentUpon>
+        </Compile>
+        <Compile Include="MedAkte\UCMedAkteCreateEingabeID.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="MedAkte\UCMedAkteCreateEingabeID.Designer.cs">
+          <DependentUpon>UCMedAkteCreateEingabeID.cs</DependentUpon>
+        </Compile>
+        <Compile Include="MedAkte\UCMedAkteDelete.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="MedAkte\UCMedAkteDelete.Designer.cs">
+          <DependentUpon>UCMedAkteDelete.cs</DependentUpon>
+        </Compile>
+        <Compile Include="MedAkte\UCMedAkteUpdate.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="MedAkte\UCMedAkteUpdate.Designer.cs">
+          <DependentUpon>UCMedAkteUpdate.cs</DependentUpon>
+        </Compile>
+        <Compile Include="MedAkte\UCMedAkteUpdateEingabeID.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="MedAkte\UCMedAkteUpdateEingabeID.Designer.cs">
+          <DependentUpon>UCMedAkteUpdateEingabeID.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Program.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Stammtierdaten\DBStammtierdaten.cs" />
+        <Compile Include="Stammtierdaten\Stammtierdaten.cs" />
+        <Compile Include="Stammtierdaten\UCStammtierCreate.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Stammtierdaten\UCStammtierCreate.Designer.cs">
+          <DependentUpon>UCStammtierCreate.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Stammtierdaten\UCStammtierdaten.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Stammtierdaten\UCStammtierdaten.Designer.cs">
+          <DependentUpon>UCStammtierdaten.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Stammtierdaten\UCStammtierdatenDeleteIDEing.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Stammtierdaten\UCStammtierdatenDeleteIDEing.Designer.cs">
+          <DependentUpon>UCStammtierdatenDeleteIDEing.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Stammtierdaten\UCStammtierUpdate.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Stammtierdaten\UCStammtierUpdate.Designer.cs">
+          <DependentUpon>UCStammtierUpdate.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Stammtierdaten\UCStammtierUpdateEingabe.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Stammtierdaten\UCStammtierUpdateEingabe.Designer.cs">
+          <DependentUpon>UCStammtierUpdateEingabe.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Stammtierdaten\UCTest.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Stammtierdaten\UCTest.Designer.cs">
+          <DependentUpon>UCTest.cs</DependentUpon>
+        </Compile>
+        <Compile Include="UCNavigationPersonen.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="UCNavigationPersonen.Designer.cs">
+          <DependentUpon>UCNavigationPersonen.cs</DependentUpon>
+        </Compile>
+        <Compile Include="UCNavigationTierverwaltung.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="UCNavigationTierverwaltung.Designer.cs">
+          <DependentUpon>UCNavigationTierverwaltung.cs</DependentUpon>
+        </Compile>
+        <Compile Include="UCTierverwaltungZwischenPanel.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="UCTierverwaltungZwischenPanel.Designer.cs">
+          <DependentUpon>UCTierverwaltungZwischenPanel.cs</DependentUpon>
+        </Compile>
+        <Compile Include="VerVer\DBVerVer.cs" />
+        <Compile Include="VerVer\UCVerVer.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="VerVer\UCVerVer.Designer.cs">
+          <DependentUpon>UCVerVer.cs</DependentUpon>
+        </Compile>
+        <Compile Include="VerVer\UCVerVerCreate.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="VerVer\UCVerVerCreate.Designer.cs">
+          <DependentUpon>UCVerVerCreate.cs</DependentUpon>
+        </Compile>
+        <Compile Include="VerVer\UCVerVerCreateEingabeID.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="VerVer\UCVerVerCreateEingabeID.Designer.cs">
+          <DependentUpon>UCVerVerCreateEingabeID.cs</DependentUpon>
+        </Compile>
+        <Compile Include="VerVer\UCVerVerDelete.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="VerVer\UCVerVerDelete.Designer.cs">
+          <DependentUpon>UCVerVerDelete.cs</DependentUpon>
+        </Compile>
+        <Compile Include="VerVer\UCVerVerUpdate.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="VerVer\UCVerVerUpdate.Designer.cs">
+          <DependentUpon>UCVerVerUpdate.cs</DependentUpon>
+        </Compile>
+        <Compile Include="VerVer\UCVerVerUpdateEingabeID.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="VerVer\UCVerVerUpdateEingabeID.Designer.cs">
+          <DependentUpon>UCVerVerUpdateEingabeID.cs</DependentUpon>
+        </Compile>
+        <Compile Include="VerVer\VerVer.cs" />
+        <EmbeddedResource Include="AufnahmeAbgabe\UCAufAb.resx">
+          <DependentUpon>UCAufAb.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="AufnahmeAbgabe\UCAufAbCreate.resx">
+          <DependentUpon>UCAufAbCreate.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="AufnahmeAbgabe\UCAufAbCreateEingabeID.resx">
+          <DependentUpon>UCAufAbCreateEingabeID.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="AufnahmeAbgabe\UCAufAbDelete.resx">
+          <DependentUpon>UCAufAbDelete.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="AufnahmeAbgabe\UCAufAbUpdate.resx">
+          <DependentUpon>UCAufAbUpdate.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="AufnahmeAbgabe\UCAufAbUpdateEingabeID.resx">
+          <DependentUpon>UCAufAbUpdateEingabeID.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Form1.resx">
+          <DependentUpon>Form1.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Kennzeichnung\UCKennzCreate.resx">
+          <DependentUpon>UCKennzCreate.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Kennzeichnung\UCKennzCreateEingabe.resx">
+          <DependentUpon>UCKennzCreateEingabe.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Kennzeichnung\UCKennzDelete.resx">
+          <DependentUpon>UCKennzDelete.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Kennzeichnung\UCKennzeichnung.resx">
+          <DependentUpon>UCKennzeichnung.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Kennzeichnung\UCKennzUpdate.resx">
+          <DependentUpon>UCKennzUpdate.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Kennzeichnung\UCKennzUpdateEingabeID.resx">
+          <DependentUpon>UCKennzUpdateEingabeID.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Login.resx">
+          <DependentUpon>Login.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="MedAkte\UCMedAkte.resx">
+          <DependentUpon>UCMedAkte.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="MedAkte\UCMedAkteCreate.resx">
+          <DependentUpon>UCMedAkteCreate.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="MedAkte\UCMedAkteCreateEingabeID.resx">
+          <DependentUpon>UCMedAkteCreateEingabeID.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="MedAkte\UCMedAkteDelete.resx">
+          <DependentUpon>UCMedAkteDelete.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="MedAkte\UCMedAkteUpdate.resx">
+          <DependentUpon>UCMedAkteUpdate.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="MedAkte\UCMedAkteUpdateEingabeID.resx">
+          <DependentUpon>UCMedAkteUpdateEingabeID.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Properties\Resources.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+        <Compile Include="Properties\Resources.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Resources.resx</DependentUpon>
+        </Compile>
+        <EmbeddedResource Include="Stammtierdaten\UCStammtierCreate.resx">
+          <DependentUpon>UCStammtierCreate.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Stammtierdaten\UCStammtierdaten.resx">
+          <DependentUpon>UCStammtierdaten.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Stammtierdaten\UCStammtierdatenDeleteIDEing.resx">
+          <DependentUpon>UCStammtierdatenDeleteIDEing.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Stammtierdaten\UCStammtierUpdate.resx">
+          <DependentUpon>UCStammtierUpdate.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Stammtierdaten\UCStammtierUpdateEingabe.resx">
+          <DependentUpon>UCStammtierUpdateEingabe.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Stammtierdaten\UCTest.resx">
+          <DependentUpon>UCTest.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="UCNavigationPersonen.resx">
+          <DependentUpon>UCNavigationPersonen.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="UCNavigationTierverwaltung.resx">
+          <DependentUpon>UCNavigationTierverwaltung.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="UCTierverwaltungZwischenPanel.resx">
+          <DependentUpon>UCTierverwaltungZwischenPanel.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="VerVer\UCVerVer.resx">
+          <DependentUpon>UCVerVer.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="VerVer\UCVerVerCreate.resx">
+          <DependentUpon>UCVerVerCreate.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="VerVer\UCVerVerCreateEingabeID.resx">
+          <DependentUpon>UCVerVerCreateEingabeID.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="VerVer\UCVerVerDelete.resx">
+          <DependentUpon>UCVerVerDelete.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="VerVer\UCVerVerUpdate.resx">
+          <DependentUpon>UCVerVerUpdate.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="VerVer\UCVerVerUpdateEingabeID.resx">
+          <DependentUpon>UCVerVerUpdateEingabeID.cs</DependentUpon>
+        </EmbeddedResource>
+        <None Include="packages.config" />
+        <None Include="Properties\Settings.settings">
+            <Generator>SettingsSingleFileGenerator</Generator>
+            <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+        </None>
+        <Compile Include="Properties\Settings.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Settings.settings</DependentUpon>
+            <DesignTimeSharedInput>True</DesignTimeSharedInput>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="App.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="Resources\designstrive_studio_aAWPBV2oaCw_unsplash.jpg" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
